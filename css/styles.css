@@ -1,0 +1,173 @@
+/* CircularStd @font-face kit */
+@font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-Black.eot');
+    src: url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Black.woff') format('woff'), url('../fonts/CircularStd-Black.ttf') format('truetype'), url('../fonts/CircularStd-Black.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-BlackItalic.eot');
+    src: url('../fonts/CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BlackItalic.woff') format('woff'), url('../fonts/CircularStd-BlackItalic.ttf') format('truetype'), url('../fonts/CircularStd-BlackItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 800;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-Bold.eot');
+    src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype'), url('../fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-BoldItalic.eot');
+    src: url('../fonts/CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BoldItalic.woff') format('woff'), url('../fonts/CircularStd-BoldItalic.ttf') format('truetype'), url('../fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 600;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-Medium.eot');
+    src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-MediumItalic.eot');
+    src: url('../fonts/CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-MediumItalic.woff') format('woff'), url('../fonts/CircularStd-MediumItalic.ttf') format('truetype'), url('../fonts/CircularStd-MediumItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 500;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-Book.eot');
+    src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Book.woff') format('woff'), url('../fonts/CircularStd-Book.ttf') format('truetype'), url('../fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/CircularStd-BookItalic.eot');
+    src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BookItalic.woff') format('woff'), url('../fonts/CircularStd-BookItalic.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'AkkuratLight';
+    src: url('../fonts/AkkuratLightRegular.eot');
+    src: url('../fonts/AkkuratLightRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/Akkurat-Light.woff') format('woff'), url('../fonts/Akkurat-Light.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+/* ------ GENERALES ------*/
+
+body{
+    font-family:'CircularStd', sans-serif;
+    margin:0px;
+}
+
+a{
+    text-decoration: none;
+    color:#2E1442;
+    font-size:18px;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#E96A90;
+}
+
+/* ------ PRIMERA SECCION ------*/
+
+header{
+    float:left;
+    width:100%;
+    height: 55px;
+    border-bottom:1px solid #F1EDED;
+    position: fixed;
+    top: 0;
+    right: 0;}
+
+#logotipo{
+    float: left;
+    margin: 0 52px;
+    height:inherit;
+}
+
+#logotipo h2{
+    margin:0px;
+    padding:0px;
+}
+
+#logotipo h2 a{
+    font-family: 'CircularStd', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #E96A90;
+    margin: 14px 14px;
+    display: block;
+}
+
+#logotipo h2 a:hover{
+    color: #2E1442;
+}
+
+span#numero{
+font-size:12px;
+}
+
+nav{
+    float:right;
+    width:40%;
+    margin: 0 30px;
+    height:inherit;
+    border-left:1px solid #F1EDED;
+}
+
+
+nav ul li{
+display:inline;
+float:left;
+margin-right:24px;
+}
+
+nav ul li.current a{
+    color:#E96A90;
+    }
+
+main{
+    clear:both;
+    float:left;
+}
+
+
+section{
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    
+   }
+
+
+h1{
+    font-family:'AkkuratLight', sans-serif;
+    font-size:56px;
+    display:inline-block;
+    position:fixed;
+    top:240px;
+    left:240px;
+}
+
+h1 span{
+    color:#E96A90;
+}
+
+section.hello{
+    background-image: url("../img/intro-bgimg.png");
+}
+
