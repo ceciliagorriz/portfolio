@@ -65,57 +65,6 @@
   }
 
 
-/* RESET.CSS
-  http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
 
 /* ------ GENERALES ------*/
 
@@ -135,29 +84,35 @@ a:hover{
     color:#E96A90;
 }
 
+p{
+  margin: 16px 0px;
+}
 /* ------ PRIMERA SECCION ------*/
 
 header{
-    float:left;
-    width:100%;
-    height: 55px;
-    border-bottom:1px solid #F1EDED;
-    position: fixed;
-    top: 0;
-    right: 0;}
+  float: left;
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid #F1EDED;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffffff6e;
+  }
 
-#logotipo{
+.logotipo{
     float: left;
     margin: 0 52px;
     height:inherit;
 }
 
-#logotipo h2{
+.logotipo h2{
     margin:0px;
     padding:0px;
+
 }
 
-#logotipo h2 a{
+.logotipo h2 a{
     font-family: 'CircularStd', sans-serif;
     font-weight: 800;
     font-size: 22px;
@@ -166,7 +121,7 @@ header{
     display: block;
 }
 
-#logotipo h2 a:hover{
+.logotipo h2 a:hover{
     color: #2E1442;
 }
 
@@ -207,7 +162,7 @@ main{
 
 
 section{
-  height: 775px;
+  min-height: 775px;
   width:100%;
   text-align: center;
   display:block;
@@ -233,56 +188,111 @@ h1 span{
 }
 
 
+
 section.hello{
-    background-image: url("../img/intro-bgimg.png");
-    background-color: #fff;
+background-image: url("../img/intro-bgimg.png");
+background-size: cover;
 }
 
-section#mumood.pink{
-  background-image: url("../img/mumood-bgimg.png");
+section.white{
+  background-color: #fff;
+}
+section.pink{
   background-color: #fff5f0;
 }
+
+section.mumood{
+  background-image: url("../img/mumood-bgimg.png");
+  background-size: cover;
+}
+
+section.clique{
+  background-image: url("../img/clique-bgimg.png");
+  background-size: cover;
+}
+
+section.flow{
+  background-image: url("../img/flow-bgimg.png");
+  background-size: cover;
+}
+
+section.bauEpicalab{
+  background-image: url("../img/teacher-bgimg.png");
+  background-size: cover;
+}
+
+
 
 
 
 footer{
   width:100%;
-  float:left;
-height:80px;
-position:fixed;
+  float:left; 
+  height:58px;
+  position:fixed;
   left:0px;
   bottom:0px;
 
 
 }
-#copyright{
+.copyright{
   float:left;
   margin:42px 0px 16px 64px;
   font-size:12px;
   color:#444;
 }
 
-#contact{
+.contact{
   float: right;
-  width: 28%;
+  width: 25%;
   margin-right: 27px;
 }
 
-#contact p{
+.contact p{
   float: right;
   margin-right: 24px;
-  margin-top: 6px;
+  margin: 2px;
   font-weight:800;
   color:#E96A90;
 }
 
-#contact p a:link{
+.contact p a:link{
   color:#E96A90;
   font-size:16px;
   font-family: 'CircularStd';
   font-weight:400;
 }
 
-#contact p a:hover{
+.contact p a:hover{
   color:#2E1442;
 }
+
+
+/*--------ABOUT--------*/
+.bio{
+  clear: both;
+  text-align: left;
+  padding: 42px;
+  float: left;
+  width: 100%;
+  min-height:300px;
+  border-bottom:1px solid #F1EDED;
+  font-size: 18px;
+  margin: 80px 0px 20px 26px;
+  line-height: 1.3em;
+
+}
+
+.bio h3{
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+section.bio a{
+  color:#E96A90;
+}
+
+.bio a:hover{
+  color:#2E1442;
+}
+
