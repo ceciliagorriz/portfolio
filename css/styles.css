@@ -90,7 +90,9 @@ p{
 /* ------ PRIMERA SECCION ------*/
 
 header{
-  float: left;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
   width: 100%;
   height: 55px;
   border-bottom: 1px solid #F1EDED;
@@ -101,7 +103,6 @@ header{
   }
 
 .logotipo{
-    float: left;
     margin: 0 52px;
     height:inherit;
 }
@@ -130,15 +131,14 @@ sup{vertical-align: super;font-size:12px;}
 
 
 nav{
-    float:right;
-    width:60%;
     margin: 0 30px;
     height:inherit;
     
 }
 
 nav ul{
-  float: right;
+ display: flex;
+ justify-content:flex-end;
   height: inherit;
   border-left: 1px solid #f1eded;
   padding-left: 20px;
@@ -146,8 +146,11 @@ nav ul{
 
 nav ul li{
     display: inline;
-    float: left;
     margin: 19px 24px;
+}
+
+nav ul li:first-child {
+  margin-top: 17px;
 }
 
 nav ul li.current a{
@@ -155,8 +158,8 @@ nav ul li.current a{
     }
 
 main{
-  clear: both;
-  float: left;
+display:flex;
+flex-direction:column;
   width: 100%;
 }
 
@@ -226,31 +229,31 @@ section.bauEpicalab{
 
 
 footer{
-  width:100%;
-  float:left; 
-  height:58px;
-  position:fixed;
-  left:0px;
-  bottom:0px;
-
-
+     width: 100%;
+    height: 32px;
 }
-.copyright{
-  float:left;
-  margin:42px 0px 16px 64px;
-  font-size:12px;
-  color:#444;
+
+footer p{
+  margin: 48px 0px 16px 64px;
+  font-size: 12px;
+  color: #444;
 }
+
 
 .contact{
-  float: right;
-  width: 25%;
-  margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  bottom: 14px;
+  margin-right: 51px;
+  text-align: right;
 }
 
+
 .contact p{
-  float: right;
-  margin-right: 24px;
+  width:100%;
   margin: 2px;
   font-weight:800;
   color:#E96A90;
@@ -270,10 +273,8 @@ footer{
 
 /*--------ABOUT--------*/
 .bio{
-  clear: both;
   text-align: left;
   padding: 42px;
-  float: left;
   width: 100%;
   min-height:300px;
   border-bottom:1px solid #F1EDED;
