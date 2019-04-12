@@ -164,13 +164,6 @@ flex-direction:column;
 }
 
 
-section{
-  min-height: 775px;
-  width:100%;
-  text-align: center;
-  display:block;
-   }
-
 
 h1{
   display:inline-block;
@@ -190,6 +183,10 @@ h1 span{
     color:#E96A90;
 }
 
+
+section{
+  height:100vh;
+   }
 
 
 section.hello{
@@ -272,20 +269,32 @@ footer p{
 
 
 /*--------ABOUT--------*/
-.bio{
+
+
+.bio, .history{
   text-align: left;
-  padding: 42px;
+  padding: 42px 42px 42px 67px;
   width: 100%;
-  min-height:300px;
-  border-bottom:1px solid #F1EDED;
   font-size: 18px;
-  margin: 80px 0px 20px 26px;
   line-height: 1.3em;
+  margin: 0px 0px 20px 0px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2e1442;
 
 }
 
+.bio{
+  margin-top: 80px;
+  height:300px;
+  border-bottom: 1px solid #F1EDED;
+}
+
 .bio h3{
-  font-weight: 600;
+  font-weight: bold;
   margin: 20px 0px;
 }
 
@@ -297,3 +306,34 @@ section.bio a{
   color:#2E1442;
 }
 
+.cv{
+  height:auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+.history{width:60%;}
+.skills{widows: 30%;}
+
+.historySection{
+  margin-bottom:64px;
+}
+
+.historySection span{
+  color:#E96A90;
+}
+
+.historySection p{
+  margin:0px 0px 16px 0px;
+}
+
+.historySection h4{
+font-weight: 800;
+margin-bottom: 20px;
+}
+
+.historySection h6{
+  color:#4a4a4a;
+  font-size:14px;
+  font-weight:200;
+  }
