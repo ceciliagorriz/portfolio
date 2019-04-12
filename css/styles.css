@@ -68,6 +68,7 @@
 
 /* ------ GENERALES ------*/
 
+
 body{
     font-family:'CircularStd', sans-serif;
     margin:0px;
@@ -86,6 +87,7 @@ a:hover{
 
 p{
   margin: 16px 0px;
+  font-size: 18px;
 }
 /* ------ PRIMERA SECCION ------*/
 
@@ -157,10 +159,23 @@ nav ul li.current a{
     color:#E96A90;
     }
 
-main{
-display:flex;
+main.homeMain{
+/*display:flex;
 flex-direction:column;
-  width: 100%;
+scroll-snap-type: y mandatory;
+scroll-snap-type: y proximity;
+overflow-y: scroll;*/
+scroll-snap-type: y mandatory;
+    overflow: scroll;
+    height: 100vh;
+}
+
+main.homeMain > section{
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -186,6 +201,7 @@ h1 span{
 
 section{
   height:100vh;
+  width: 100vw;
    }
 
 
@@ -277,7 +293,6 @@ footer p{
   width: 100%;
   font-size: 18px;
   line-height: 1.3em;
-  margin: 0px 0px 20px 0px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -313,7 +328,7 @@ section.bio a{
 }
 
 .history{width:60%;}
-.skills{widows: 30%;}
+
 
 .historySection{
   margin-bottom:64px;
@@ -332,8 +347,40 @@ font-weight: 800;
 margin-bottom: 20px;
 }
 
-.historySection h6{
-  color:#4a4a4a;
-  font-size:14px;
-  font-weight:200;
+.historySection h6 {
+  font-size: 14px;
+  font-weight: 200;
+  color: #2e1442a9;
+}
+
+
+  aside{
+    padding: 47px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2e1442a9;
   }
+
+aside h6{
+font-size: 20px;
+  font-weight: 900;
+  margin-bottom:24px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2e1442;
+  }
+
+  .skills{
+  margin-bottom: 32px;
+}
+
+
+
+  
+  
