@@ -86,7 +86,7 @@ a:hover{
 }
 
 p{
-  margin: 16px 0px;
+  margin: 16px 80px 16px 0px;
   font-size: 18px;
 }
 /* ------ PRIMERA SECCION ------*/
@@ -130,12 +130,9 @@ header{
 
 sup{vertical-align: super;font-size:12px;}
 
-
-
 nav{
     margin: 0 30px;
-    height:inherit;
-    
+    height:inherit;  
 }
 
 nav ul{
@@ -160,11 +157,6 @@ nav ul li.current a{
     }
 
 main.homeMain{
-/*display:flex;
-flex-direction:column;
-scroll-snap-type: y mandatory;
-scroll-snap-type: y proximity;
-overflow-y: scroll;*/
 scroll-snap-type: y mandatory;
     overflow: scroll;
     height: 100vh;
@@ -175,7 +167,7 @@ main.homeMain > section{
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-end;
 }
 
 
@@ -283,6 +275,9 @@ footer p{
   color:#2E1442;
 }
 
+.infoProject{
+  margin-top:40px;
+}
 
 /*--------ABOUT--------*/
 
@@ -304,7 +299,7 @@ footer p{
 
 .bio{
   margin-top: 80px;
-  height:300px;
+  height: auto;
   border-bottom: 1px solid #F1EDED;
 }
 
@@ -382,5 +377,19 @@ font-size: 20px;
 
 
 
-  
+  /*------MEDIA QUERIES-----*/
+  @media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
   
