@@ -8,25 +8,59 @@
       <title>Thisiscecilia — UX/UI Designer & Teacher </title>
       <link rel="stylesheet" type="text/css" href="css/reset.css">
       <link rel="stylesheet" href="css/styles.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <meta name="theme-color" content="#202020">
 
       <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/-touch-icon.png">
       <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  </head>
+
+      <script src="https://code.jquery.com/jquery-1.9.1.js"
+            integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=" crossorigin="anonymous"></script>
+
+      <script>
+            $(window).load(function () { /*carga cuando se carga toda la página--*/
+                  $(window).on("scroll resize", function () {/*cuando sucede un scroll o un resize--*/
+                        var pos = $('#titular').offset();/*Devuelve la posicion de un elemento relativa al documento*/
+                        $('.post').each(function () { /* debe pasar este cambio en cada elemento de la clase .post*/
+                              if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {/* si la posicion en y de la sección es más alta de la posición en y del contenedor de texto*/
+                                    var newDescr = $(this).find('.description').html();/* busca el elemento descripción de la sección y lo pone como texto */
+                                    var oldDescr = $("#titular").html();/*cambia el contenido del contenedor*/
+
+                                    $('#titular').html(newDescr);/*cambia el contenido del contenedor por la nueva descripción*/
+                                    if (newDescr !== oldDescr) {/*animación del cambio*/
+                                          $("#titular").css('opacity', 0.4).animate({
+                                                'opacity': '1',
+                                          }, 200);
+                                          return;
+                                    }
+                              }
+                        });
+                  });
+
+                  $(document).ready(function () {
+                        $(window).trigger('scroll'); // init the value
+                  });
+            });
+      </script>
+</head>
 
 <body>
-      <h1 class="centeredTitle"><span>Designer.</span>Teacher. Researcher</h1>
+            
+     
       <main class="homeMain" id="homeMain">
-            <section class="white hello">
-                 <header>
+            <section class="post white hello">
+      
+                        <h1 class="centeredTitle" id="titular"></h1>
+                        <p class="description" style="display: none;"><span class="rosa">Designer.</span>Teacher. Researcher.</p>
+                  <header>
                         <div class="container">
                               <nav>
-                                          <div class="logo">
-                                                      <h2><a href="index.html">thisiscecilia.com</a></h2>
-                                                </div>
+                                    <div class="logo">
+                                          <h2><a href="index.html">thisiscecilia.com</a></h2>
+                                    </div>
                                     <input type="checkbox" id="nav" class="hidden">
                                     <label for="nav" class="nav-btn">
                                           <i></i>
@@ -34,7 +68,7 @@
                                           <i></i>
                                     </label>
 
-                                   
+
                                     <div class="nav-wrapper">
                                           <ul>
                                                 <li class="current"><a href="index.html">Works <sup>(4)</sup></a></li>
@@ -51,49 +85,79 @@
                         </div>
                   </header>
             </section>
+ 
 
-            <section class="mumood pink" id="mumoodProj">
+            <section class="post mumood pink" id="mumoodProj">
+                        <p class="description" style="display: none;"><span class="rosa">user-centered</span> design process</p>
                   <div class="infoProject">
                         <h3>Mumood</h3>
                         <p><span>Mood-driven music player for iOS, based on music therapy benefits.</span></p>
-                        <a href="mumood.html">Read case study  <i class="fas fa-chevron-right"></i></a>
+                        <a href="mumood.html">Read case study <i class="fas fa-chevron-right"></i></a>
                   </div>
             </section>
 
 
-            <section class="clique white" id="cliqueProj">
-                        <div class="infoProject">
-                                    <h3>Clique</h3>
-                                    <p><span>Build a trust relationship with your next-door  neighbours through a private favour network.</span></p>
-                                    <a href="clique.html">Read case study  <i class="fas fa-chevron-right"></i></a>
-                              </div>
+            <section class="post clique white" id="cliqueProj">
+                        <p class="description" style="display: none;">people-oriented frictionless solutions</p>
+                  <div class="infoProject">
+                        <h3>Clique</h3>
+                        <p><span>Build a trust relationship with your next-door neighbours through a private favour
+                                    network.</span></p>
+                        <a href="clique.html">Read case study <i class="fas fa-chevron-right"></i></a>
+                  </div>
             </section>
 
 
-            <section class="flow pink" id="flowProj">
-                        <div class="infoProject">
-                                    <h3>Flow</h3>
-                                    <p><span>Interactive arduino lamp, which takes the color  of the sea surface in real-time.</span></p>
-                                    <a href="flow.html">Case coming soon...</a>
-                              </div>
+            <section class="post flow pink" id="flowProj">
+                        <p class="description" style="display: none;">thoughtful digital experiences</p>
+                  <div class="infoProject">
+                        <h3>Flow</h3>
+                        <p><span>Interactive arduino lamp, which takes the color of the sea surface in
+                                    real-time.</span></p>
+                        <a href="flow.html">Case coming soon...</a>
+                  </div>
             </section>
 
 
-            <section class="bauEpicalab white" id="BauProj">
-                        <div class="infoProject">
-                                    <h3>Bau&Epicalab</h3>
-                                    <p><span>Performative Crossmedia Workshop & workshow,  in collaboration with la Fura dels Baus.</span></p>
-                                    <a href="bauepicalab.html">Case coming soon...  </a>
-                              </div>
+            <section class="post bauEpicalab white" id="BauProj">
+                        <p class="description" style="display: none;">unique teaching workshops</p>    
+                  <div class="infoProject">
+                        <h3>Bau&Epicalab</h3>
+                        <p><span>Performative Crossmedia Workshop & workshow, in collaboration with la Fura dels
+                                    Baus.</span></p>
+                        <a href="bauepicalab.html">Case coming soon... </a>
+
+                        <p>lorem ipsum blabalb</p>
+                  </div>
 
             </section>
+
       </main>
+     
+
+
+
+
+
+
+
+
+
+
+
       <!---------------------------------- Pie de página fijo ---------------------------->
 
-    <div class="contact">
+      <div class="contact">
             <p><span class="negrita">how can I help you?</span></p>
             <p><a href="mailto:hello@thisiscecilia.com">hello[at]thisiscecilia.com</a></p>
-        </div>
+      </div>
+
+
+
+
+
+
+
 </body>
 
 </html>

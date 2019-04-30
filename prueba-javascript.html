@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Thisiscecilia — UX/UI Designer & Teacher </title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script
+			  src="https://code.jquery.com/jquery-1.9.1.js"
+			  integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+			  crossorigin="anonymous"></script>    
+  <script>
+   $(window).load(function() {
+  $(window).on("scroll resize", function() {
+    var pos = $('#date').offset();
+    $('.post').each(function() {
+      if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
+        var newDescr = $(this).find('.description').text();
+        var oldDescr = $("#date").html();
+
+        $('#date').html(newDescr);
+        if (newDescr !== oldDescr) {
+          $("#date").css('opacity', 0.4).animate({
+            'opacity': '1',
+          }, 200);
+          return;
+        }
+      }
+    });
+  });
+
+  $(document).ready(function() {
+    $(window).trigger('scroll'); // init the value
+  });
+});
+
+  </script>
+  </head>
+  <body>
+      <div class="holder">
+        <div class="sidebar">
+          <b>Peter Woyzbun</b>
+          <br/>
+          <br/>QIO
+          <br/>LUNCH
+          <br/>Posters
+          <br/>Great Economists
+          <br/>Westboro Creative
+          <br/>&#8212;
+          <br/>About
+          <br/>Contact</div>
+        <div class="main">
+          <div style='height:200px;' class='post'>
+            <p class="description" style="display: none;">content one description</p>
+            Website Other Stuff
+            <br/>Other Stuff
+          </div>
+          <div style='height:250px;' class='post'>
+            <p class="description" style="display: none;">content two description</p>
+            Packaging
+          </div>
+          <div style='height:350px;' class='post'>
+            <p class="description" style="display: none;">content three description</p>
+            Mobile Website
+          </div>
+          <div style='height:200px;' class='post'>
+            <p class="description" style="display: none;">content four description</p>
+            Proposal Book
+          </div>
+          <div id='date'></div>
+          <div style='height:800px;'></div>
+        </div>
+      </div>
+    </body>
+    
+  </html>
