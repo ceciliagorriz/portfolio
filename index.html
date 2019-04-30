@@ -24,18 +24,20 @@
             $(window).load(function () { /*carga cuando se carga toda la página--*/
                   $(window).on("scroll resize", function () {/*cuando sucede un scroll o un resize--*/
                         var pos = $('#titular').offset();/*Devuelve la posicion de un elemento relativa al documento*/
+                        
                         $('.post').each(function () { /* debe pasar este cambio en cada elemento de la clase .post*/
-                              if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {/* si la posicion en y de la sección es más alta de la posición en y del contenedor de texto*/
-                                    var newDescr = $(this).find('.description').html();/* busca el elemento descripción de la sección y lo pone como texto */
-                                    var oldDescr = $("#titular").html();/*cambia el contenido del contenedor*/
+                        var newDescr = $(this).find('.description').html();/* busca el elemento descripción de la sección y lo pone como texto */
+                        var oldDescr = $("#titular").html();/*guarda el contenido del contenedor*/
 
+                              if (pos.top >= $(this).offset().top && newDescr !== oldDescr){/* si la posicion en y de la sección es más alta de la posición en y del contenedor de texto*/
+                                  
                                     $('#titular').html(newDescr);/*cambia el contenido del contenedor por la nueva descripción*/
-                                    if (newDescr !== oldDescr) {/*animación del cambio*/
-                                          $("#titular").css('opacity', 0.4).animate({
-                                                'opacity': '1',
-                                          }, 200);
-                                          return;
-                                    }
+                                    // if (newDescr !== oldDescr) {/*animación del cambio*/
+                                    //       $("#titular").css('opacity', 0.4).animate({
+                                    //             'opacity': '1',
+                                    //       }, 200);
+                                    //       return;
+                                    // }
                               }
                         });
                   });
