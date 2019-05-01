@@ -151,6 +151,10 @@ header{
       margin: 18px 0px;
 }
 
+.rosa{
+      color:#E96A90;    
+}
+
 
 .logo a {
       font-family:'CircularStd', sans-serif;
@@ -627,7 +631,7 @@ p.content {
 }
 
 .post {
-	border: 1px dashed grey;
+	border: 1px solid white;
 
 }
 

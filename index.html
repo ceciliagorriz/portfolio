@@ -32,12 +32,12 @@
                               if (pos.top >= $(this).offset().top && newDescr !== oldDescr){/* si la posicion en y de la sección es más alta de la posición en y del contenedor de texto*/
                                   
                                     $('#titular').html(newDescr);/*cambia el contenido del contenedor por la nueva descripción*/
-                                    // if (newDescr !== oldDescr) {/*animación del cambio*/
-                                    //       $("#titular").css('opacity', 0.4).animate({
-                                    //             'opacity': '1',
-                                    //       }, 200);
-                                    //       return;
-                                    // }
+                                    if (newDescr !== oldDescr) {/*animación del cambio*/
+                                          $("#titular").css('opacity', 0.4).animate({
+                                                'opacity': '1',
+                                          }, 200);
+                                          return;
+                                    }
                               }
                         });
                   });
@@ -61,7 +61,7 @@
                         <div class="container">
                               <nav>
                                     <div class="logo">
-                                          <h2><a href="index.html">thisiscecilia.com</a></h2>
+                                          <h2><a href="index.html">thisiscecilia</a></h2>
                                     </div>
                                     <input type="checkbox" id="nav" class="hidden">
                                     <label for="nav" class="nav-btn">
@@ -100,7 +100,7 @@
 
 
             <section class="post clique white" id="cliqueProj">
-                        <p class="description" style="display: none;">people-oriented frictionless solutions</p>
+                        <p class="description" style="display: none;"><span class="rosa">people-oriented</span> frictionless solutions</p>
                   <div class="infoProject">
                         <h3>Clique</h3>
                         <p><span>Build a trust relationship with your next-door neighbours through a private favour
@@ -111,7 +111,7 @@
 
 
             <section class="post flow pink" id="flowProj">
-                        <p class="description" style="display: none;">thoughtful digital experiences</p>
+                        <p class="description" style="display: none;"><span class="rosa">thoughtful</span> digital experiences</p>
                   <div class="infoProject">
                         <h3>Flow</h3>
                         <p><span>Interactive arduino lamp, which takes the color of the sea surface in
@@ -122,14 +122,12 @@
 
 
             <section class="post bauEpicalab white" id="BauProj">
-                        <p class="description" style="display: none;">unique teaching workshops</p>    
+                        <p class="description" style="display: none;"><span class="rosa">Professional</span> but playful workshops</p>    
                   <div class="infoProject">
                         <h3>Bau&Epicalab</h3>
                         <p><span>Performative Crossmedia Workshop & workshow, in collaboration with la Fura dels
                                     Baus.</span></p>
                         <a href="bauepicalab.html">Case coming soon... </a>
-
-                        <p>lorem ipsum blabalb</p>
                   </div>
 
             </section>
@@ -138,25 +136,12 @@
      
 
 
-
-
-
-
-
-
-
-
-
       <!---------------------------------- Pie de página fijo ---------------------------->
 
       <div class="contact">
             <p><span class="negrita">how can I help you?</span></p>
             <p><a href="mailto:hello@thisiscecilia.com">hello[at]thisiscecilia.com</a></p>
       </div>
-
-
-
-
 
 
 
