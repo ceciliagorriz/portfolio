@@ -152,7 +152,7 @@ header{
 }
 
 .rosa{
-      color:#E96A90;    
+      color:#E96A90;   
 }
 
 
@@ -242,7 +242,12 @@ header{
       -webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */ 
 }
 
-
+section.white{
+      background-color: #fff;
+}
+section.pink{
+      background-color: #fff5f0;
+}
 
 
 section.hello{
@@ -250,12 +255,7 @@ section.hello{
       background-size: cover;
 }
 
-section.white{
-      background-color: #fff;
-}
-section.pink{
-      background-color: #fff5f0;
-}
+
 
 section.mumood{
       background-image: url("../img/mumood-bgimg.png");
@@ -275,6 +275,10 @@ section.flow{
 section.bauEpicalab{
       background-image: url("../img/teacher-bgimg.png");
       background-size: cover;
+}
+section.footergallery{
+      background-image: url("../img/teacher-bgimg.png");
+      background-size: cover; 
 }
                 
 
@@ -305,6 +309,35 @@ section.bauEpicalab{
 .fa, .fas {
       font-size: 10px;
   }
+
+  section.letswork{
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;
+
+  }
+p.collaborate{
+      width:80%;
+      margin: 26vh 0px 0px 0px;
+      font-size: 36px;
+      line-height: 42px;
+      font-weight: 600;
+      padding: 64px 64px;
+      text-align: center;
+}
+
+p.collaborate a{
+      font-size: 36px;
+      line-height: 42px;
+color:#E96A90;
+font-weight:600;
+}
+
+p.collaborate a:hover{
+color:#E96A90;
+
+}
+
 
    /* ---------------------------------- PIE DE PÁGINA -----------------------------------*/
 
@@ -473,6 +506,9 @@ aside h6{
 
 
 .fondoGris{
+      background-image: url("../img/mumood-portada-proyecto.jpg");
+      background-size: cover;
+      background-position: center;
       background-color: #efeeee;
       width: 100%;
       height: auto;
@@ -483,7 +519,7 @@ section.ProjectCard{
       grid-column-end: span 5;
       display: flex;
       flex-direction: column;
-      padding: 0px 16px;
+      padding: 0px;
 }
 
 section.projectCaseStudy{
@@ -495,7 +531,13 @@ section.projectCaseStudy{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin: 26px 18px;
+            margin: 26px 0px;
+   
+}
+
+.navBetweenProjects a{
+    font-size: 14px;
+   
 }
 
 .projectTitleBox{
@@ -661,11 +703,19 @@ p.content {
 
    /* ---------------------------------- RESPONSIVE DESIGN -----------------------------------*/
 
+
+
+
 @media screen and (max-width:900px) {
       .logo {
             padding: 0;
             margin: 0px 20px;
       }
+
+      p {
+            margin: 16px 10px 16px 0px;
+            font-size: 18px;
+        }
 
       .nav-wrapper {
             position: fixed;
@@ -691,8 +741,10 @@ p.content {
       }
 
       h1.centeredTitle{
-            font-size: 28px;
+            font-size: 30px;
             line-height: 32px;
+            width: 100%;
+            margin:0px auto;
       }
      
             
@@ -735,7 +787,7 @@ p.content {
             padding: 10px 24px;
             opacity: 0;
             color: #2E1442;
-            font-size: 18px;
+            font-size: 32px;
             font-weight: 600;
             transform: translateX(-20px);
             transition: all 0.2s ease;
@@ -748,7 +800,7 @@ p.content {
       .nav-btn {
             position: fixed;
             right: 10px;
-            top: 10px;
+            top: 5px;
             display: block;
             width: 48px;
             height: 48px;
@@ -810,6 +862,7 @@ p.content {
             padding-left: 20px;
       }
 
+
       aside{
             padding-top: 0px;
             margin: 40px 16px 0px 0px;
@@ -855,7 +908,6 @@ footer p{
       font-size:10px;
 }
 
-
 .projectMenu{
       display:none;
 }
@@ -865,10 +917,53 @@ footer p{
 }
 
 
+section.ProjectCard {
+      padding: 0px 0px;
+  }
+
+  section.projectCaseStudy {
+      grid-column-end: span 5;
+  }
+
+  .projectTitleBox {
+      width: 75%;
+      margin: 90px 0px;
+  }
+
+  .projectDetail {
+      margin-bottom: 16px;
+  }
+
+
+  p.collaborate {
+      width: 100%;
+      margin: 26vh 0px 0px 0px;
+      font-size: 28px;
+      line-height: 30px;
+      text-align: center;
+      padding: 20px;
+  }
+
+  p.collaborate a {
+      font-size: 28px;
+      line-height: 30px;
+  }
       
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 902px) {
 
+      p.collaborate {
+            width: 80%;
+            margin: 30vh 0px 0px 0px;
+      }
+      
+        p.collaborate a {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+} 
 
 
 

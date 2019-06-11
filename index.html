@@ -26,16 +26,17 @@
                         var pos = $('#titular').offset();/*Devuelve la posicion de un elemento relativa al documento*/
                         
                         $('.post').each(function () { /* debe pasar este cambio en cada elemento de la clase .post*/
-                        var newDescr = $(this).find('.description').html();/* busca el elemento descripción de la sección y lo pone como texto */
+                        
+                        
+                             
+                              if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top){/* si la posicion en y de la sección es más alta de la posición en y del contenedor de texto*/
+                                    var newDescr = $(this).find('.description').html();/* busca el elemento descripción de la sección y lo pone como texto */
                         var oldDescr = $("#titular").html();/*guarda el contenido del contenedor*/
-
-                              if (pos.top >= $(this).offset().top && newDescr !== oldDescr){/* si la posicion en y de la sección es más alta de la posición en y del contenedor de texto*/
-                                  
                                     $('#titular').html(newDescr);/*cambia el contenido del contenedor por la nueva descripción*/
                                     if (newDescr !== oldDescr) {/*animación del cambio*/
-                                          $("#titular").css('opacity', 0.4).animate({
+                                          $("#titular").css('opacity', 0.1).animate({
                                                 'opacity': '1',
-                                          }, 200);
+                                          }, 400);
                                           return;
                                     }
                               }
@@ -103,8 +104,7 @@
                         <p class="description" style="display: none;"><span class="rosa">people-oriented</span> frictionless solutions</p>
                   <div class="infoProject">
                         <h3>Clique</h3>
-                        <p><span>Build a trust relationship with your next-door neighbours through a private favour
-                                    network.</span></p>
+                        <p><span>Build a trust relationship with your next-door neighbors through a private network of favors.</span></p>
                         <a href="clique.html">Read case study <i class="fas fa-chevron-right"></i></a>
                   </div>
             </section>
@@ -122,7 +122,7 @@
 
 
             <section class="post bauEpicalab white" id="BauProj">
-                        <p class="description" style="display: none;"><span class="rosa">Professional</span> but playful workshops</p>    
+                        <p class="description" style="display: none;"><span class="rosa">professional</span> but playful workshops</p>    
                   <div class="infoProject">
                         <h3>Bau&Epicalab</h3>
                         <p><span>Performative Crossmedia Workshop & workshow, in collaboration with la Fura dels
@@ -131,6 +131,19 @@
                   </div>
 
             </section>
+
+            <section class="post footergallery pink" id="galeriaPiedepagina">
+                        <p class="description" style="display: none;"><span class="rosa">emotional</span> digital projects</p>    
+            </section>
+
+            <section class="post letswork white" id="Piedepagina">
+                        <p class="description" style="display: none;"><span class="rosa">emotional</span> digital projects</p>    
+                  <p class="collaborate">
+                  I'd ❤️ to build something great together.<br>
+                  <a href="mailto:hello@thisiscecilia.com">Let's talk</a> and see how to collaborate on your next
+                  </p>
+                  </section>
+
 
       </main>
      
